@@ -79,4 +79,21 @@ public record UserController(UserService userService) {
         userService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    /**
+     * Nova Implementacao - Lucas-Severo96 - 16/11/2024
+     * Buscando usuario pelo numero da conta bancaria
+     */
+    @GetMapping("/account/{accountNumber}")
+    @Operation(summary = "Get user by account number",
+            description = "Retrieve user details based on the account number")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Operation successful"),
+            @ApiResponse(responseCode = "404", description = "Account or user not found")
+    })
+    public ResponseEntity<UserDto> findByAccountNumber(@PathVariable String accountNumber) {
+        var user = userService.findByAccountNumber(accountNumber);
+        return ResponseEntity.ok(new UserDto(user));
+    }
+
 }

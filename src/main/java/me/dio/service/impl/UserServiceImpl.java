@@ -82,5 +82,15 @@ public class UserServiceImpl implements UserService {
             throw new BusinessException("User with ID %d can not be %s.".formatted(UNCHANGEABLE_USER_ID, operation));
         }
     }
+
+    /**
+     * Nova Implementacao - Lucas-Severo96 - 16/11/2024
+     * Buscando usuario pelo numero da conta bancaria
+     */
+    @Override
+    public User findByAccountNumber(String accountNumber) {
+        return userRepository.findByAccountNumber(accountNumber)
+                .orElseThrow(() -> new BusinessException("Account or User not found"));
+    }
 }
 
