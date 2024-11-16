@@ -1,6 +1,6 @@
-# Santander Dev Week 2023 Java API
+# Santander DIO 2024 Java API
 
-RESTful API da Santander Dev Week 2023 construída em Java 17 com Spring Boot 3.
+RESTful API da Santander Dev Week 2023 (reutilizada no Bootcamp DIO - Java com Spring Boot em 2024) construída em Java 17 com Spring Boot 3.
 
 ## Principais Tecnologias
  - **Java 17**: Utilizaremos a versão LTS mais recente do Java para tirar vantagem das últimas inovações que essa linguagem robusta e amplamente utilizada oferece;
@@ -54,10 +54,6 @@ classDiagram
 ```
 
 ## Documentação da API (Swagger)
-
-### [https://sdw-2023-prd.up.railway.app/swagger-ui.html](https://sdw-2023-prd.up.railway.app/swagger-ui.html)
-
-Esta API ficará disponível no Railway por um período de tempo limitado, mas este é um código-fonte aberto. Portanto, sintam-se à vontade para cloná-lo, modificá-lo (já que é um bom projeto base para novos projetos) e executar localmente ou onde achar mais interessante! Só não esquece de marcar a gente quando divulgar a sua solução 🥰
 
 ### IMPORTANTE
 
